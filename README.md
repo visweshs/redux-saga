@@ -60,11 +60,11 @@ const work = (message) => {
     console.log(message):
   });
 }
-const promiseWorker = new PromiseWorker(work);
+const worker = new PromiseWorker(work);
 
 function* doWorkSaga() {
   const message = 'much async, very promise'
-  const result = yield promiseWorker(message)
+  const result = yield worker(message)
   console.log(result) // 'much async, very promise'
 }
 
