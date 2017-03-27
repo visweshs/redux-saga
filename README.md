@@ -1,10 +1,12 @@
 
-Most common 'asynchronous' APIs do infact block the main JS thread - albeit for a small amount of time. This makes it hard to hit the golden 60 FPS consistently. The only real permanent solution is web workers. 
+Most common 'asynchronous' APIs do infact block the main JS thread - albeit for a small amount of time. When asynchronous work scales, it becomes hard to hit the golden 60 FPS rate consistently. The only real permanent solution is web workers. 
 
 Redux-Sagas are a fun mental model, but lack support for actual webworkers.
 
 This library attemps to merge promise-worker[https://github.com/nolanlawson/promise-worker] to provide
 web worker support for redux-sagas.
+
+The proposal is to leverage web workers inside generator functions, by promisifying the web worker computation.
 
 This is how it works now:
 
@@ -68,4 +70,4 @@ function* doWorkSaga() {
 
 ```
 
-The work done by the function work here is truly non-blocking.
+The work done by the function ```work``` here is truly non-blocking in both examples.
