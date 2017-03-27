@@ -3,7 +3,7 @@ Most common 'asynchronous' APIs do infact block the main JS thread - albeit for 
 
 Redux-Sagas are a fun mental model, but lack support for actual webworkers.
 
-This library attemps to merge promise-worker[https://github.com/nolanlawson/promise-worker] to provide
+This library attemps to merge [promise-worker](https://github.com/nolanlawson/promise-worker) to provide
 web worker support for redux-sagas.
 
 The proposal is to leverage web workers inside generator functions, by promisifying the web worker computation.
