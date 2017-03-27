@@ -51,7 +51,7 @@ This is the proposal:
 saga.js
 
 ```
-import { yield, {r} from 'redux-saga'
+import { yield } from 'redux-saga'
 import { PromiseWorker } from 'redux-saga/effects'
 
 
