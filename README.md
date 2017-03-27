@@ -70,4 +70,4 @@ function* doWorkSaga() {
 
 ```
 
-The work done by the function work here is truly none blocking.
+The work done by the function work here is truly non-blocking.
