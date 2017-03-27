@@ -1,4 +1,9 @@
-Sagas are cool, but lack support for webworkers.
+
+Most common 'asynchronous' APIs do infact block the main JS thread.
+
+The only real solution is web workers. 
+
+Redux-Sagas are a fun mental model, but lack support for actual webworkers.
 
 This library attemps to merge promise-worker[https://github.com/nolanlawson/promise-worker] to provide
 web worker support for redux-sagas.
@@ -51,7 +56,7 @@ import { PromiseWorker } from 'redux-saga/effects'
 
 
 const work = (message) => {
-  return (message =>) {
+  return (message) => {
     console.log(message):
   });
 }
