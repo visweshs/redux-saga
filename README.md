@@ -1,7 +1,5 @@
 
-Most common 'asynchronous' APIs do infact block the main JS thread.
-
-The only real solution is web workers. 
+Most common 'asynchronous' APIs do infact block the main JS thread - albeit for a small amount of time. This makes it hard to hit the golden 60 FPS consistently. The only real permanent solution is web workers. 
 
 Redux-Sagas are a fun mental model, but lack support for actual webworkers.
 
